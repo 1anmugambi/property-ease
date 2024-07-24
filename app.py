@@ -3,7 +3,7 @@ from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
 
 # M-Pesa credentials (you need to set these up in your environment variables or configuration file)
 MPESA_CONSUMER_KEY = 'your_consumer_key'

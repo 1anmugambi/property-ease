@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { FaHome, FaCog, FaMoneyBill, FaComments, FaCar, FaUserSlash } from 'react-icons/fa';
-import Login from './Auth/Login';
-import Signup from './Auth/Signup';
-import DeleteAccount from './Auth/DeleteAccount';
+import DeleteAccount from './DeleteAccount';
 
 const Dashboard = () => {
   const location = useLocation();
@@ -125,8 +123,8 @@ const Dashboard = () => {
         </aside>
       </div>
 
-      {showLogin && <Login />}
-      {showSignup && <Signup />}
+      {/* {showLogin && <Login />}
+      {showSignup && <Signup />} */}
       {showDeleteAccount && <DeleteAccount />}
     </div>
   );
